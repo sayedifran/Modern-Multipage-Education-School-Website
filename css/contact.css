@@ -1,0 +1,147 @@
+.contact-container {
+  background: var(--color-bg1);
+  width: var(--container-width-lg);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 2rem;
+  height: 30rem;
+  margin: 7rem auto;
+  border-radius: 1rem;
+  padding-inline: 2rem;
+}
+
+/* --------=========== aside ====----------- */
+.contact-aside {
+  background-color: #6c63ff;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: fit-content;
+  position: relative;
+  bottom: 5rem;
+  /* margin: 2rem 0 0 2rem; */
+}
+
+.contact-aside h2,p,
+ul,
+.foot-social-logos {
+  padding-inline: 3rem;
+}
+
+.aside-img{
+    margin-bottom: 2rem;
+}
+.contact-aside h2{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.contact-aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+.contact-details li{
+     display: flex;
+     gap: 1rem;
+     align-items: center;
+     margin-bottom: 1rem;
+
+}
+.contact-social-logos {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+     
+}
+.contact-logo{
+    background-color: var(--color-bg);
+    
+}
+.contact-logo:hover{
+    padding: .1rem;
+
+}
+
+
+/* ======== contact form ==== */
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right : 3rem;
+    margin-top: 3rem;
+    /* width: 100%; */
+}
+.user-name{
+    display: flex;
+    gap: 1.2rem;
+}
+.user-name input[type]{
+    width:50%;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: white;
+    font-size: large    ;
+}
+.contact-form .btn{
+    width:max-content;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+/* ======== media querries   for tablets ========== */
+ @media screen and (max-width:1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    .contact-container{
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+
+    }
+    .contact-aside{
+        width: auto;
+        bottom: 0;
+    }
+    .contact-aside h2,p,
+    ul,
+    .foot-social-logos{
+      padding-inline: 1.5rem;+/
+    }
+    input, textarea{
+        padding: 0.8rem;
+    }
+ }
+
+
+
+ /* ======== media querries  for mobile phone ========== */
+ @media screen and (max-width:600px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+    .contact-container{
+        grid-template-columns: 1fr;
+        padding-block: 2rem;
+        margin-block: 2rem;
+        
+    }
+    input, textarea{
+        padding: 0.7rem;
+        font-size: medium;
+    }
+    .contact-container{
+        padding: 1rem;
+        /* width: 100%; */
+        margin: auto;
+    }
+ }

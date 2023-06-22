@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Montserrat , sans-serif;
+}
+:root{
+    --color-primary: #6c63ff;
+    --color-succes: #00bfae ;
+    --color-warning: #f7c94b ;
+    --color-danger: #f75842 ;
+    --color-danger-variant: rgba(247, 88, 66, 0.4) ;
+    --color-white: #fff ;
+    --color-black: #000 ;
+    --color-bg: #1f2641;
+    --color-bg1:  #2e3267 ;
+    --color-bg2: #424890  ;
+
+    --container-width-lg: 80% ;
+    --container-width-md:  90%;
+    --container-width-sm: 94% ;
+ 
+    --transition: all 400ms ease;
+
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;  
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+h1, h2, h3, h4{
+    line-height: 1.2rem;
+}
+section{
+    padding: 6rem 0;
+}
+section h2{
+  margin-bottom: 3rem;
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+a{
+    color: var(--color-white);
+}
+
+body{
+   background: var(--color-bg);
+   color: var(--color-white);
+}
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+.btn{
+    
+}
+.btn-primary{
+
+}
+
+/* ---====== Nav bar  =====---- */
+.nav-container{
+    background: transparent;
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem .2rem;
+}
+.nav-manu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    color: var(--color-white);
+}
+.nav-manu ul li a{
+    transition: var(--transition);
+    
+}
+.nav-manu ul li a:hover{
+    color: var(--color-black);
+}
+button{
+    display: none;
+}
+
+/* ---===== Hearder section===---- */
+ 
+.hearder-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    height: 70vh;
+    align-items: center
+}
+
+.header-info h2{
+    margin-bottom: 2rem;
+}
+
+
+
+.hearder-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;
+    gap: 1rem;
+    text-align: center;
+    
+}
+
+.card{
+    background: var(--color-bg1);
+    padding: 1rem;
+    height: fit-content;
+    width: 7rem;
+    border-radius: 1rem;
+
+}
+.card:hover{
+    background: var(--color-bg2);
+    box-shadow:  0 3rem 3rem rgba(0, 3rem, 3rem, rgba(0, 0, 0, 0.3) );
+}
+.card-icon{
+    background: var(--color-danger);
+    padding: .7rem;
+    border-radius: 10px;
+    display:inline-block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.card:nth-child(2) .card-icon{
+    background: var(--color-succes);
+
+}
+.card:nth-child(3) .card-icon{
+    background: var(--color-primary);
+    
+}
+
+.header-card-info *{
+    margin-bottom: .7rem;
+}
+
+.header-left {
+    width: 100%;
+}
+
+
+/* -------========== Team section ---= */
+
+.team-mem-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    text-align: center;
+  
+}
+.team-mem-container article{
+    position: relative;
+    padding: 1rem;
+    background: var(--color-bg1);
+    border-radius: .6rem;
+    overflow: hidden;   
+}
+
+.team-social{
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right:-100%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+.team-mem-container article:hover .team-social{
+    right:0;
+}
+.team-social a{
+    width: 100%;
+    padding: .5rem 0 .5rem .5rem;
+}
+
+.team-info *{
+    margin-block: 1rem;
+}
+.team-info h5{
+    font-size: 1.2rem;
+}
+.team-info p{
+    font-size: .8rem;
+    color: lightgray;
+}
+
+
+    /* ---------------------Media query Tablets--------------------- */
+/* ===================================================================== */
+
+@media screen and (max-width: 1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.1rem;
+    }
+     
+
+    /*===========heaer section-========= */
+    .hearder-container {
+        gap: 0;
+        height: fit-content;
+        padding: 3rem;
+    }
+    header{
+        margin-bottom: 0rem;
+        height: fit-content;
+    }
+    .header-card-info *{
+        margin-bottom: .2rem;
+    }
+    .header-card-info p{
+        margin-bottom: .2rem;
+    }
+    /* ============ Team section =========== */
+
+}
+@media screen and (max-width:700px) {
+    .hearder-container{
+        grid-template-columns: 1fr;
+        height: fit-content;
+        align-items: center;
+        gap: 1rem;
+        padding: 0rem;
+    }
+    
+    header{
+        margin-bottom: 1rem;
+    }
+    .header-right{
+        padding-inline: 3rem;
+        /* padding-block:1rem;
+        height: 30vh;
+        display: flex; */
+    }
+    .header-left{
+        justify-content: space-between;
+        text-align: center;
+    }
+    .header-left p{
+        margin-bottom: 1.5rem;
+        padding-inline: 0.5rem;
+    }
+    
+    .card{
+       
+        padding: 1rem;
+        height: fit-content;
+        width: auto;
+        padding-bottom: 0rem;
+        margin-inline: 1rem;
+        margin-bottom: 2rem;
+       
+    }
+
+    /* =========team section==== */
+    /* .teams{
+        background-color: red;
+        padding-top: 1rem;
+    } */
+ 
+    .team-mem-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+      
+    }
+    .team-mem-container article{
+        padding: 0rem;
+       
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        width: var(--container-width-sm);
+
+    }
+    h1{
+        font-size: 1.9rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 0.9rem;
+    }
+    
+    .hearder-container{
+       width: auto;
+       display: flex;
+       flex-wrap: wrap;
+    }
+    /* .header-right{
+        /* padding-inline: 4rem; */
+    /* } */ */
+    .header-left{
+        padding-inline: 0.5rem;
+        width: fit-content;
+    }
+    .header-left p{
+        /* text-align: center; */
+        font-size: 0.9rem;
+        /* padding-inline: 0.5rem; */
+        /* width: fit-content; */
+    }
+    .hearder-cards{
+        gap: 0.5rem;
+        margin-inline: rem;
+
+    }
+    .card {
+
+        margin-inline: 0rem;
+    }
+
+    /* ========= teams section */
+    .team-mem-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-inline: 2rem;
+    }
+   
+}
